@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notícias IBGE</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <form id="search-form">
+            <input type="text" id="search-input" name="busca" placeholder="Buscar...">
+            <button type="submit" id="search-button">🔍</button>
+        </form>
+        <div id="filter-icon-container">
+            <svg
+              width="20"
+              height="20"
+              fill="#f0f0f0"
+              viewBox="0 0 80 90"
+              focusable="false"
+              xmlns="http://www.w3.org/2000/svg"
+              id="filter-icon"
+              style="cursor: pointer;"
+            >
+              <path d="m 0,0 30,45 0,30 10,15 0,-45 30,-45 Z"></path>
+            </svg>
+            <span id="filter-count">0</span>
+        </div>
+    </header>
+    <main>
+        <ul id="news-list"></ul>
+        <ul id="pagination"></ul>
+    </main>
+    <footer></footer>
+
+    <dialog id="filter-dialog">
+        <form id="filter-form">
+            <label for="type">Tipo</label>
+            <select id="type" name="tipo">
+                <!-- Options will be populated dynamically -->
+            </select>
+            <label for="quantity">Quantidade</label>
+            <select id="quantity" name="quantidade">
+                <option value="10">10</option>
+                <option value="15">15</option>
+                <option value="20">20</option>
+                <option value="25">25</option>
+                <option value="30">30</option>
+            </select>
+            <label for="date-from">De</label>
+            <input type="date" id="date-from" name="de">
+            <label for="date-to">Até</label>
+            <input type="date" id="date-to" name="ate">
+            <button type="button" id="close-dialog">X</button>
+            <button type="submit">Aplicar</button>
+        </form>
+    </dialog>
+
+    <script src="script.js"></script>
+</body>
+</html>
