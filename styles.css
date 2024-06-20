@@ -1,0 +1,143 @@
+/* styles.css */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header, footer {
+    background-color: #4682b4;
+    color: white;
+    padding: 10px;
+    position: relative;
+}
+
+main {
+    background-color: #f0f0f0;
+    padding: 20px;
+    max-width: 100ch;
+    margin: auto;
+}
+
+header form {
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+#search-input {
+    width: 80%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#search-button {
+    position: absolute;
+    right: 10%;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1.2em;
+}
+
+#filter-icon-container {
+    position: absolute;
+    right: 20px;
+    top: 10px;
+    display: flex;
+    align-items: center;
+}
+
+#filter-icon {
+    cursor: pointer;
+}
+
+#filter-count {
+    background: #ff0000;
+    color: white;
+    border-radius: 50%;
+    padding: 0 5px;
+    margin-left: 5px;
+    position: absolute;
+    top: -5px;
+    right: -10px;
+    font-size: 0.8em;
+}
+
+dialog {
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+    padding: 20px;
+}
+
+dialog form {
+    display: grid;
+    gap: 10px;
+}
+
+@media (min-width: 760px) {
+    dialog form {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+#close-dialog {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    font-size: 1.2em;
+    cursor: pointer;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+#news-list li {
+    background: white;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#news-list li img {
+    max-width: 100%;
+    border-radius: 5px;
+}
+
+#pagination {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+}
+
+#pagination button {
+    padding: 5px 10px;
+    border: none;
+    background: #4682b4;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+#pagination button.active {
+    background: #ff0000;
+}
+
+@media (max-width: 760px) {
+    header form {
+        flex-direction: column;
+    }
+
+    #search-button {
+        right: 0;
+        bottom: 0;
+    }
+}
